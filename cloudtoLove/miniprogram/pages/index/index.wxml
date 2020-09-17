@@ -1,0 +1,57 @@
+<!--index.wxml-->
+
+<!--文本框-->
+
+
+<form bindsubmit="onSubmit">                  <!--事件提交--> 
+
+<!--表达对象-->
+<van-cell-group>
+  <van-field name="lover" 
+    placeholder="输入表白对象"
+  />
+</van-cell-group>
+<!--表白内容-->
+<van-cell-group>
+  <van-field name="context" 
+    label="表白内容"
+    type="textarea"
+    placeholder="爱就向TA告白！！"
+    autosize
+  />
+</van-cell-group>
+
+<!--
+<view class="input-text">
+<text>表达对象</text>
+</view>
+<input class="input1" name="lover"></input>
+-->
+<!--表达内容-->
+<!--
+<view class="input-text">
+<text>表白内容</text>  
+</view>
+<input class="input2" name="context"></input>
+-->
+<!--图像-->
+<block wx:if="{{Image}}">
+<image src="{{Image}}"></image>
+</block>
+  <!-- 上传图片 -->
+  <view class="uploader">
+    <view class="uploader-text" bindtap="doUpload">
+      <text>上传图片</text>
+    </view>
+  </view>
+
+
+
+
+  <view class="submit">
+  <navigator url="../LoveInfo/LoveInfo">
+  <button form-type="submit">发布</button>
+  </navigator>
+  </view>
+
+  </form>

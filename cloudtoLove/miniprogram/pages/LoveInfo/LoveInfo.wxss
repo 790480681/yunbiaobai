@@ -1,0 +1,50 @@
+/* pages/LoveInfo/LoveInfo.wxss */
+.im{
+  width: 750rpx;
+  height: 700rpx;
+}
+
+
+.Plus{
+   bottom: 100rpx;
+   background-color:wheat;
+   z-index: 100;
+   bottom: 100rpx;
+   width: 80rpx;
+   position: fixed;
+   right: 370rpx;
+   
+}
+.PlusIcon{
+font-size: 80rpx;
+}
+
+.input-style{
+  width: 70%;
+  height: 40px;
+  border-radius: 25px;
+  background: #f3f3f5;
+  font-size: 14px;
+  /* text-indent: 15px; */
+  padding-left: 15px;
+  float: left;
+  color:#808286;
+}
+ 
+.btn{
+  width: 10%;
+  
+  font-size: 14px;
+  float: right;
+  border-radius: 10px;
+  color: #2c3036;
+  background:silver;
+  letter-spacing: 2px;
+}
+
+.comment{
+  font-size: 14px;
+  color: #2c3036;
+  line-height: 25px;
+  padding: 24rpx 0 0 20px;
+}

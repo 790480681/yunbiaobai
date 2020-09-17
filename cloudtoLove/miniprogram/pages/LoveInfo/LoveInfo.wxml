@@ -1,0 +1,54 @@
+<!--pages/LoveInfo/LoveInfo.wxml-->
+
+
+
+<view class="Plus"> 
+<navigator url="../index/index"> 
+<van-icon class="PlusIcon" name="plus"/>
+<text style="font-size:11px">去表白</text>
+</navigator>
+
+</view>
+
+<block wx:for="{{task}}">
+
+<van-card
+  desc="{{item.context}}"
+  title="表白对象:{{item.lover}}"
+>
+
+
+  <view slot="footer">
+  <van-icon wx:if="{{item.state==1}}"  name="like" size="20px"  data-index="{{index}}" bindtap="onUp"/>
+  <van-icon wx:if="{{item.state==0}}"  name="like-o" size="20px" data-index="{{index}}" bindtap="onUp" />
+   <text>{{item.num}}</text>
+   <!-- <van-icon name="chat-o" size ="20px" id="{{item._id}}" bindtap="Remark"/>   
+   <text>评论</text> -->
+
+ </view>
+
+</van-card>
+
+
+
+<!--显示照片-->
+<view>
+<image class="im" wx:if="{{item.Image}}" src="{{item.Image}}"></image>
+</view>
+<!--评论框-->
+<view class="message">
+<form bindsubmit="formSubmit" class="form">
+<input type="text" placeholder="留下你的精彩评论吧" class="input-style" name="remarks" ></input>
+<button form-type="submit" class="btn" id="{{item._id}}" >发送</button>
+</form>
+</view>
+<!--显示评论-->
+
+<view  wx:if="{{id==item._id}}">
+<text class="comment" >{{liuyan}}
+</text>
+</view>
+
+</block>
+
+
